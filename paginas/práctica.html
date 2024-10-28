@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="all" href="../style.css" />
+    <title>Práctica.com</title>
+    <!--<link rel="stylesheet" media="all" href="style.css" />-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+
+
+function calculo() {
+    
+    var respuesta1 = 0, respuesta2 = 0, respuesta3 = 0, respuesta4 = 0, respuesta5 = 0, respuesta6 = 0, respuesta7 = 0, respuesta8 = 0, respuesta9 = 0, respuesta10 = 0; 
+
+    let seleccion1 = document.querySelector('input[name="respuesta1"]:checked');
+    let seleccion2 = document.querySelector('input[name="respuesta2"]:checked');
+    let seleccion3 = document.querySelector('input[name="respuesta3"]:checked');
+    let seleccion4 = document.querySelector('input[name="respuesta4"]:checked');
+    let seleccion5 = document.querySelector('input[name="respuesta5"]:checked');
+    let seleccion6 = document.querySelector('input[name="respuesta6"]:checked');
+    let seleccion7 = document.querySelector('input[name="respuesta7"]:checked');
+    let seleccion8 = document.querySelector('input[name="respuesta8"]:checked');
+    let seleccion9 = document.querySelector('input[name="respuesta9"]:checked');
+    let seleccion10 = document.querySelector('input[name="respuesta10"]:checked');
+    if (seleccion1) { 
+        if (seleccion1.value === "I am a programmer.") {
+            respuesta1 += 2;
+        }
+    }   else {
+            alert("Por favor, seleccione una respuesta para la primera pregunta."); 
+            return;
+        }
+    if (seleccion2) { 
+        if (seleccion2.value === "My brother is 20 years old.") {
+            respuesta2 += 2;
+        }
+    }   else {
+            alert("Por favor, seleccione una respuesta para la segunda pregunta."); 
+            return;
+        }
+    if (seleccion3) { 
+        if (seleccion3.value === "I have a phone.") {
+            respuesta3 += 2;
+        }
+    }   else {
+            alert("Por favor, seleccione una respuesta para la tercera pregunta."); 
+            return;
+        }
+    if (seleccion4) { 
+        if (seleccion4.value === "It is a song.") {
+            respuesta4 += 2;
+        }
+    }   else {
+            alert("Por favor, seleccione una respuesta para la cuarta pregunta."); 
+            return;
+        }
+    if (seleccion5) { 
+        if (seleccion5.value === "I am making a web page.") {
+            respuesta5 += 2;
+        }
+    }   else {
+            alert("Por favor, seleccione una respuesta para la quinta pregunta."); 
+            return;
+        }
+    if (seleccion6) { 
+        if (seleccion6.value === "I have class on Tuesday.") {
+            respuesta6 += 2;
+        }
+    }   else {
+            alert("Por favor, seleccione una respuesta para la sexta pregunta."); 
+            return;
+        }
+    if (seleccion7) { 
+        if (seleccion7.value === "My dog is in the park.") {
+            respuesta7 += 2;
+        }
+    }   else {
+            alert("Por favor, seleccione una respuesta para la séptima pregunta."); 
+            return;
+        }
+    if (seleccion8) { 
+        if (seleccion8.value === "Fruit is healthy for you.") {
+            respuesta8 += 2;
+        }
+    }   else {
+            alert("Por favor, seleccione una respuesta para la octova pregunta."); 
+            return;
+        }   
+    if (seleccion9) { 
+        if (seleccion9.value === "We are friends.") {
+            respuesta9 += 2;
+        }
+    }   else {
+            alert("Por favor, seleccione una respuesta para la novena pregunta."); 
+            return;
+        } 
+    if (seleccion10) { 
+        if (seleccion10.value === "They do homework together.") {
+            respuesta10 += 2;  
+        }
+    }   else {
+            alert("Por favor, seleccione una respuesta para la décima pregunta."); 
+            return;
+        }
+        aumento = (respuesta1+respuesta2+respuesta3+respuesta4+respuesta5+respuesta6+respuesta7+respuesta8+respuesta9+respuesta10);
+        let mensaje = "Usted sacó " + (respuesta1+respuesta2+respuesta3+respuesta4+respuesta5+respuesta6+respuesta7+respuesta8+respuesta9+respuesta10);
+        document.getElementById("txtp").value = mensaje; 
+
+
+        if( aumento >= 12){
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "FELICIDADES!",
+                showConfirmButton: false,
+                timer: 1500
+            });               
+        }
+        else{
+            Swal.fire({
+                position: "top-end",
+                icon: "error",
+                title: "INTETE PRÁCTICAR MÁS!",
+                showConfirmButton: false,
+                timer: 1500
+            });
+        }
+    }
+    </script> 
+</head>
+<body bgcolor="#cfe44d">
+    <form name = "frmdatos" class="form3">
+        <center>
+            <br><br>
+            <h1 class="titulo">PRÁCTICA DE INGLÉS</h1>
+            <h3 class="practicatxt1">A continuación habrán una serie de preguntas y respuesta de las cuáles debes responder cada una y al final podrás ver la calificación que sacastes, (el máximo de nota es 20).</h3>
+            
+            <h2 class="practicatxt2">PREGUNTAS Y RESPUESTAS</h2>
+            <h1 class="pregunta"> 1. Soy un programador.</h1>
+            <div class="seleccion1">
+                <p class="practican1">a)</p> 
+                <input type="radio" id="a1" name="respuesta1" value="I am a programmer."> 
+                <label for="a1">I am a programmer.</label>
+            </div>
+            <br>
+            <div class="seleccion1">
+                <p class="practican1">b)</p>
+                <input type="radio" id="b1" name="respuesta1" value="I have a programmer.">
+                <label for="b1">I have a programmer.</label>
+            </div>
+            <br>
+            <div class="seleccion1">
+                <p class="practican1">c)</p>
+                <input type="radio" id="c1" name="respuesta1" value="I do a programmer.">
+                <label for="c1">I do a programmer.</label>
+            </div>
+            <br>
+            <h1 class="pregunta">2. Mi hermano tiene 20 años.</h1>
+            <div class="seleccion1">
+                <p class="practican1">a)</p> 
+                <input type="radio" id="a2" name="respuesta2" value="My brother has 20 years old."> 
+                <label for="a2">My brother has 20 years old.</label>
+            </div>
+            <br>
+            <div class="seleccion1">
+                <p class="practican1">b)</p>
+                <input type="radio" id="b2" name="respuesta2" value="My brother are 20 years old.">
+                <label for="b2">My brother are 20 years old.</label>
+            </div>
+            <br>
+            <div class="seleccion1">
+                <p class="practican1">c)</p>
+                <input type="radio" id="c2" name="respuesta2" value="My brother is 20 years old.">
+                <label for="c2">My brother is 20 years old.</label>
+            </div>
+            <br>
+            <h1 class="pregunta"> 3. Tengo un celular.</h1>
+            <div class="seleccion1">
+                <p class="practican1">a)</p> 
+                <input type="radio" id="a3" name="respuesta3" value="I are a phone."> 
+                <label for="a3">I are a phone.</label>
+            </div>
+            <br>
+            <div class="seleccion1">
+                <p class="practican1">b)</p>
+                <input type="radio" id="b3" name="respuesta3" value="I am a phone.">
+                <label for="b3">I am a phone.</label>
+            </div>
+            <br>
+            <div class="seleccion1">
+                <p class="practican1">c)</p>
+                <input type="radio" id="c3" name="respuesta3" value="I have a phone.">
+                <label for="c3">I have a phone.</label>
+            </div>
+            <br>
+            <h1 class="pregunta">4. Eso es una canción.</h1>
+            <div class="seleccion1">
+                <p class="practican1">a)</p> 
+                <input type="radio" id="a4" name="respuesta4" value="It is a song."> 
+                <label for="a4">It is a song.</label>
+            </div>
+            <br>
+            <div class="seleccion1">
+                <p class="practican1">b)</p>
+                <input type="radio" id="b4" name="respuesta4" value="It has a song.">
+                <label for="b4">It has a song.</label>
+            </div>
+            <br>
+            <div class="seleccion1">
+                <p class="practican1">c)</p>
+                <input type="radio" id="c4" name="respuesta4" value="It are a song.">
+                <label for="c4">It are a song.</label>
+            </div>
+            <br>
+            <h1 class="pregunta"> 5. Estoy haciendo una página web.</h1>
+            <div class="seleccion1">
+                <p class="practican1">a)</p> 
+                <input type="radio" id="a5" name="respuesta5" value="I am making web page."> 
+                <label for="a5">I am making a web page.</label>
+            </div>
+            <br>
+            <div class="seleccion1">
+                <p class="practican1">b)</p>
+                <input type="radio" id="b5" name="respuesta5" value="I have making web page.">
+                <label for="b5">I have making a web page.</label>
+            </div>
+            <br>
+            <div class="seleccion1">
+                <p class="practican1">c)</p>
+                <input type="radio" id="c5" name="respuesta5" value="I do making web page.">
+                <label for="c5">I do making a web page.</label>
+            </div>
+            <br>
+            <h1 class="pregunta">6. Tengo class el martes.</h1>
+            <div class="seleccion1">
+                <p class="practican1">a)</p> 
+                <input type="radio" id="a6" name="respuesta6" value="I have class on Tuesday."> 
+                <label for="a6">I have class on Tuesday.</label>
+            </div>
+            <br>
+            <div class="seleccion1">
+                <p class="practican1">b)</p>
+                <input type="radio" id="b6" name="respuesta6" value="I are class on Sunday.">
+                <label for="b6">I are class on Sunday.</label>
+            </div>
+            <br>
+            <div class="seleccion1">
+                <p class="practican1">c)</p>
+                <input type="radio" id="c6" name="respuesta6" value="I am class on Tuesday.">
+                <label for="c6">I am class on Tuesday.</label>
+            </div>
+            <br>
+            <h1 class="pregunta"> 7. Mi perro esta en el parque.</h1>
+            <div class="seleccion1">
+                <p class="practican1">a)</p> 
+                <input type="radio" id="a7" name="respuesta7" value="My dog are in the park."> 
+                <label for="a7">My dog are in the park.</label>
+            </div>
+            <br>
+            <div class="seleccion1">
+                <p class="practican1">b)</p>
+                <input type="radio" id="b7" name="respuesta7" value="My dog is in the park.">
+                <label for="b7">My dog is in the park.</label>
+            </div>
+            <br>
+            <div class="seleccion1">
+                <p class="practican1">c)</p>
+                <input type="radio" id="c7" name="respuesta7" value="My dog am in the park.">
+                <label for="c7">My dog am in the park.</label>
+            </div>
+            <br>
+            <h1 class="pregunta">8. La fruta es saludable para ti.</h1>
+            <div class="seleccion1">
+                <p class="practican1">a)</p> 
+                <input type="radio" id="a8" name="respuesta8" value="Fruit is healthy for you."> 
+                <label for="a8">Fruit is healthy for you.</label>
+            </div>
+            <br>
+            <div class="seleccion1">
+                <p class="practican1">b)</p>
+                <input type="radio" id="b8" name="respuesta8" value="Fruit am healthy for you.">
+                <label for="b8">Fruit am healthy for you.</label>
+            </div>
+            <br>
+            <div class="seleccion1">
+                <p class="practican1">c)</p>
+                <input type="radio" id="c8" name="respuesta8" value="Fruit has healthy for you.">
+                <label for="c8">Fruit has healthy for you.</label>
+            </div>
+            <br>
+            <h1 class="pregunta"> 9. Nosotros somos amigos.</h1>
+            <div class="seleccion1">
+                <p class="practican1">a)</p> 
+                <input type="radio" id="a9" name="respuesta9" value="We is friend."> 
+                <label for="a9">We is friend.</label>
+            </div>
+            <br>
+            <div class="seleccion1">
+                <p class="practican1">b)</p>
+                <input type="radio" id="b9" name="respuesta9" value="We are friends.">
+                <label for="b9">We are friends.</label>
+            </div>
+            <br>
+            <div class="seleccion1">
+                <p class="practican1">c)</p>
+                <input type="radio" id="c9" name="respuesta9" value="We have friends.">
+                <label for="c9">We have friends.</label>
+            </div>
+            <br>
+            <h1 class="pregunta">10. Ellos hacen tarea juntos.</h1>
+            <div class="seleccion1">
+                <p class="practican1">a)</p> 
+                <input type="radio" id="a10" name="respuesta10" value="They do homework together."> 
+                <label for="a10">They do homework together.</label>
+            </div>
+            <br>
+            <div class="seleccion1">
+                <p class="practican1">b)</p>
+                <input type="radio" id="b10" name="respuesta10" value="They are homework together.">
+                <label for="b10">They are homework together.</label>
+            </div>
+            <br>
+            <div class="seleccion1">
+                <p class="practican1">c)</p>
+                <input type="radio" id="c10" name="respuesta10" value="They have homework together.">
+                <label for="c10">They have homework together.</label>
+            </div>
+            <br>
+
+            <input type="button" class="submit" 
+            name="btnprocesar" id="btnprocesar" onclick="calculo()" value="Publicar"/>
+            <br>
+            <label for="txtp">
+            <input type="text" class="puntuaje" name="txtp" id="txtp" readonly/></label>
+
+        </center>
+
+    </form>
+</body>
+</html>
